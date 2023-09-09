@@ -248,10 +248,10 @@ transform: scale(1);
         text-shadow: 0 0 15px #ffffffb8;
     }
     25%{
-        text-shadow: 0 0 35px #ffffff;
+        text-shadow: 0 0 35px #ffb700;
     }
     50%{
-        text-shadow: 0 0 25px #ffffff;
+        text-shadow: 0 0 25px #ffb700;
     }
     100%{
         text-shadow: 0 0 15px #ffffffb8;
