@@ -2070,7 +2070,7 @@ Customize https://plyr.io
 #stars:after {
     content: " ";
     position: absolute;
-    top: -2000px;
+    top: 2000px;
     width: 1px;
     height: 1px;
     border-radius: 50%;
@@ -2090,7 +2090,7 @@ Customize https://plyr.io
 #stars2:after {
     content: " ";
     position: absolute;
-    top: -2000px;
+    top: 2000px;
     width: 2px;
     height: 2px;
     border-radius: 50%;
@@ -2110,7 +2110,7 @@ Customize https://plyr.io
 #stars3:after {
     content: " ";
     position: absolute;
-    top: -2000px;
+    top: 2000px;
     width: 3px;
     height: 3px;
     border-radius: 50%;
@@ -2124,7 +2124,7 @@ Customize https://plyr.io
     }
 
     to {
-        transform: translateY(2000px);
+        transform: translateY(-2000px);
     }
 }
 
