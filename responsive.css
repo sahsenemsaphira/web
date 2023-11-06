@@ -219,6 +219,29 @@
             height: 130px;
         }
 }
+@media screen and (max-width:800px) {
+    .second-box {
+            display: flex;
+            flex-wrap: wrap;
+            height: auto;
+            justify-content: center;
+            gap: 25px;
+        }
+        
+}
+@media screen and (max-width:550px) {
+    .box-music {
+            width: 100%;
+        }
+    
+        .first-m {
+            height: auto;
+        }
+    
+        .first-m img {
+            height: auto;
+        }
+}
 @media screen and (max-width:370px) {
     .client-box-img {
             width: 100px;
