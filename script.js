@@ -2,10 +2,7 @@ const menuBtn = document.querySelector(".fa-bars")
 const menuBtn2 = document.querySelector(".fa-bars2")
 const overlay = document.querySelector(".overlay")
 const navMenu = document.querySelector(".nav-links-container")
-const portfolio = document.querySelector(".portfolio")
-const dot = document.querySelector(".dot-effect")
-const home = document.querySelector(".home")
-const navMenua = document.querySelectorAll(".link-m")
+
 
 
 window.addEventListener("click", (e)=>{
@@ -32,12 +29,6 @@ window.addEventListener("click", (e)=>{
     
 })
 
-home.addEventListener("click", ()=>{
-    dot.style.left = "25%"
-})
-portfolio.addEventListener("click", ()=>{
-    dot.style.left = "67%"
-})
 
 
 window.addEventListener('scroll', function () {
