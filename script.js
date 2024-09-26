@@ -1,33 +1,4 @@
-const menuBtn = document.querySelector(".fa-bars")
-const menuBtn2 = document.querySelector(".fa-bars2")
-const overlay = document.querySelector(".overlay")
-const navMenu = document.querySelector(".nav-links-container")
 
-
-
-window.addEventListener("click", (e)=>{
-    console.log(e.target);
-    if (e.target === menuBtn) {
-        overlay.style.display = "block"
-        navMenu.style.right = "0%"
-    }
-    if (e.target === menuBtn2) {
-        overlay.style.display = "block"
-        navMenu.style.right = "0%"
-    }
-    if (e.target === overlay) {
-        overlay.style.display = "none"
-        navMenu.style.right = "-105%"
-    }
-
-    for (let i = 0; i < navMenua.length; i++) {
-        if (e.target === navMenua[i]) {
-            overlay.style.display = "none"
-            navMenu.style.right = "-105%"
-        }
-    }
-    
-})
 
 
 

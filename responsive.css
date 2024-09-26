@@ -40,6 +40,7 @@
 }
 }
 @media screen and (max-width:1200px) {
+   
     .nav-container{
         background: #000;
     }
@@ -53,21 +54,100 @@
         width: 100%;
     }
     .text-over{
+        padding: 10px;
+        -webkit-filter: blur(0px) !important;
         font-size: 18px !important;
     }
     .logo a{
+        -webkit-filter: blur(0px) !important;
         font-size: 18px !important;
     }
     .fa-bars{
+        -webkit-filter: blur(0px) !important;
         font-size: 18px !important;
     }
+    .nav-links-container a{
+        width: 100% !important;
+        -webkit-filter: blur(0px) !important;
+    }
+        @-webkit-keyframes blur {
+            0% {
+                -webkit-filter: blur(0px);
+                opacity: 1;
+            }
+    
+            50% {
+                -webkit-filter: blur(0px);
+                opacity: 1;
+            }
+    
+            100% {
+                -webkit-filter: blur(0px);
+                opacity: 1;
+            }
+        }
+    
+        @-webkit-keyframes jerk {
+            50% {
+                left: 0px;
+            }
+    
+            51% {
+                left: 0;
+            }
+        }
+                @-webkit-keyframes jerkwhole {
+                    40% {
+                        opacity: 1;
+                        top: 0;
+                        left: 0px;
+                        -webkit-transform: scale(1);
+                        -webkit-transform: skew(0, 0);
+                    }
+        
+                    41% {
+                        opacity: 1;
+                        top: 0px;
+                        left: 0px;
+                        -webkit-transform: scale(1);
+                        -webkit-transform: skew(0, 0);
+                    }
+        
+                    42% {
+                        opacity: 1;
+                        top: 0px;
+                        left: 0px;
+                        -webkit-transform: scale(1, 1.8);
+                        -webkit-transform: skew(0, 0);
+                    }
+        
+                    43% {
+                        opacity: 1;
+                        top: 0;
+                        left: 0;
+                        -webkit-transform: scale(1);
+                        -webkit-transform: skew(0, 0);
+                    }
+                }
+    .menu-btn{
+        -webkit-filter: blur(0px) !important;
+    }
     .copyf{
+        -webkit-filter: blur(0px) !important;
         font-size: 13px !important;
     }
+    .play-btn a{
+        -webkit-filter: blur(0px) !important;
+    }
+    .social-links a{
+        -webkit-filter: blur(0px) !important;
+    }
     .social-links a i{
+        -webkit-filter: blur(0px) !important;
         font-size: 22px !important;
     }
     .second-box .title{
+        -webkit-filter: blur(0px) !important;
         padding-top: 20px;
     }
         
@@ -141,7 +221,7 @@
         right: -105%;
         background: #000000;
         
-        width: 350px;
+        width: 260px !important; 
         transition: .4s ease all;
         height: 100vh;
     }
