@@ -206,12 +206,11 @@
                     navMenu.style.right = "-105%"
                 }
 
-                for (let i = 0; i < navMenua.length; i++) {
-                    if (e.target === navMenua[i]) {
-                        overlay.style.display = "none"
-                        navMenu.style.right = "-105%"
-                    }
+                if (e.target === navMenu) {
+                    overlay.style.display = "none"
+                    navMenu.style.right = "-105%"
                 }
+
 
             })
     </script>
