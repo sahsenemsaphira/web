@@ -1,4 +1,36 @@
+const menuBtn = document.querySelector(".fa-bars");
+const menuBtn2 = document.querySelector(".fa-bars2");
+const overlay = document.querySelector(".overlay");
+const navMenu = document.querySelector(".nav-links-container");
 
+function handleClick(e) {
+    console.log(e.target);
+    if (e.target === menuBtn || e.target === menuBtn2) {
+        overlay.style.display = "block";
+        navMenu.style.right = "0%";
+    }
+    if (e.target === overlay || e.target === navMenu) {
+        overlay.style.display = "none";
+        navMenu.style.right = "-150%";
+    }
+}
+
+// Hem click hem de touchstart olayını dinlemek için
+window.addEventListener("click", handleClick);
+window.addEventListener("touchstart", handleClick);
+
+// iOS'ta dokunma olaylarının çalışması için menu butonlarına touchstart eklendi
+menuBtn.addEventListener("touchstart", (e) => {
+    overlay.style.display = "block";
+    navMenu.style.right = "0%";
+    e.preventDefault(); // Olası tıklama/dokunma çatışmalarını önler
+}, { passive: false });
+
+menuBtn2.addEventListener("touchstart", (e) => {
+    overlay.style.display = "block";
+    navMenu.style.right = "0%";
+    e.preventDefault();
+}, { passive: false });
 
 
 
