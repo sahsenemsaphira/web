@@ -558,8 +558,7 @@ animation: moveIn 3s 0s cubic-bezier(.36, 0, .06, 1) alternate infinite;
         text-shadow: 0 0 1px #ffffff70;
         font-size: 32px;
         text-align: center;
-        -webkit-filter: blur(2px);
-        -webkit-animation: blur 30ms infinite, jerk 50ms infinite;
+       
         font-weight: 500;
 }
 .menu-btn span{
@@ -2660,4 +2659,16 @@ Customize https://plyr.io
        display: none;
        z-index: 999;
        /* Overlay menüden bir kat altta olacak şekilde ayarlandı */
+   }
+   /* X işaretini simgelemek için */
+   .fa-times {
+       display: none;
+   }
+
+   .menu-btn.active .fa-times {
+       display: inline;
+   }
+
+   .menu-btn.active .fa-bars {
+       display: none;
    }

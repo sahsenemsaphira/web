@@ -2,35 +2,41 @@ const menuBtn = document.querySelector(".fa-bars");
 const menuBtn2 = document.querySelector(".fa-bars2");
 const overlay = document.querySelector(".overlay");
 const navMenu = document.querySelector(".nav-links-container");
+const menuContainer = document.querySelector(".menu-btn"); // Menü butonunu seçiyoruz
 
-function handleClick(e) {
-    console.log(e.target);
-    if (e.target === menuBtn || e.target === menuBtn2) {
-        overlay.style.display = "block";
-        navMenu.style.right = "0%";
-    }
-    if (e.target === overlay || e.target === navMenu) {
+// Menüyü açıp kapatma işlevi
+function toggleMenu() {
+    const isMenuOpen = navMenu.style.right === "0%";
+
+    if (isMenuOpen) {
+        // Menü kapalı hale gelir
         overlay.style.display = "none";
         navMenu.style.right = "-150%";
+        menuContainer.classList.remove("active");
+        menuBtn2.textContent = "Menu"; // Yazı tekrar "Menu" olur
+    } else {
+        // Menü açık hale gelir
+        overlay.style.display = "block";
+        navMenu.style.right = "0%";
+        menuContainer.classList.add("active");
+        menuBtn2.textContent = "Close"; // Yazı "Close" olur
     }
 }
 
-// Hem click hem de touchstart olayını dinlemek için
-window.addEventListener("click", handleClick);
-window.addEventListener("touchstart", handleClick);
-
-// iOS'ta dokunma olaylarının çalışması için menu butonlarına touchstart eklendi
-menuBtn.addEventListener("touchstart", (e) => {
-    overlay.style.display = "block";
-    navMenu.style.right = "0%";
+// Tıklama ve dokunma olaylarını dinlemek için
+menuContainer.addEventListener("click", toggleMenu);
+menuContainer.addEventListener("touchstart", (e) => {
+    toggleMenu();
     e.preventDefault(); // Olası tıklama/dokunma çatışmalarını önler
 }, { passive: false });
 
-menuBtn2.addEventListener("touchstart", (e) => {
-    overlay.style.display = "block";
-    navMenu.style.right = "0%";
-    e.preventDefault();
-}, { passive: false });
+// Overlay'e tıklanınca menü kapanır
+overlay.addEventListener("click", () => {
+    overlay.style.display = "none";
+    navMenu.style.right = "-150%";
+    menuContainer.classList.remove("active");
+    menuBtn2.textContent = "Menu"; // Menü kapandığında yazı tekrar "Menu" olur
+});
 
 
 
