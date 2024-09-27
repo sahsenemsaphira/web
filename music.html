@@ -192,35 +192,25 @@
 
 
     <script>
-        const menuBtn = document.querySelector(".fa-bars")
-            const menuBtn2 = document.querySelector(".fa-bars2")
-            const overlay = document.querySelector(".overlay")
-            const navMenu = document.querySelector(".nav-links-container")
+       const menuBtn = document.querySelector(".fa-bars");
+            const menuBtn2 = document.querySelector(".fa-bars2");
+            const overlay = document.querySelector(".overlay");
+            const navMenu = document.querySelector(".nav-links-container");
 
-
-
-            window.addEventListener("click", (e) => {
+            function handleClick(e) {
                 console.log(e.target);
-                if (e.target === menuBtn) {
-                    overlay.style.display = "block"
-                    navMenu.style.right = "0%"
-                }
-                if (e.target === menuBtn2) {
-                    overlay.style.display = "block"
-                    navMenu.style.right = "0%"
+                if (e.target === menuBtn || e.target === menuBtn2) {
+                    overlay.style.display = "block";
+                    navMenu.style.right = "0%";
                 }
                 if (e.target === overlay) {
-                    overlay.style.display = "none"
-                    navMenu.style.right = "-105%"
+                    overlay.style.display = "none";
+                    navMenu.style.right = "-150%";
                 }
+            }
 
-                if (e.target === navMenu) {
-                    overlay.style.display = "none"
-                    navMenu.style.right = "-105%"
-                }
-
-
-            })
+            window.addEventListener("click", handleClick);
+            window.addEventListener("touchstart", handleClick);
     </script>
 <script src="script.js"></script>
     <script src="https://vjs.zencdn.net/5.4.6/video.js"></script>

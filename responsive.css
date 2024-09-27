@@ -174,83 +174,7 @@
     
     
 }
-@media screen and (max-width:3050px) {
-    .pop-up-lang{
-        text-align: left;
-    }
-    .popup{
-        left: 0;
-        transform-origin: top left;
-    }
-    .popup a{
-        padding:10px  !important;
-    }
-    .nav-section {
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 10px 0;
-        }
-    .full-sec{
-        margin: 0;
-        border-radius: 0;
-        border: 0;
-    }
-    .portfolio-container{
-        justify-content: center;
-        align-items: center;
-    }
-    .video-card {
-            width: 500px;
-            height: 300px;
-        }
-    .dot-effect{
-        display: none;
-    }
-    .mobile-e {
-        display: block;
-        font-size: 24px;
-        padding: 20px 0;
-    }
-    .nav-links-container{
-        position: fixed;
-        display: flex;
-        flex-direction: column;
-        top: 0;
-        right: -105%;
-        background: #000000;
-        
-        width: 260px !important; 
-        transition: .4s ease all;
-        height: 100vh;
-    }
-    .nav-links-container a{
-        padding:20px 0px;
-        text-align: left;
-    }
-    .mail-section{
-        display: none;
-    }
-    .nav-container{
-        display: flex;
-        justify-content: start;
-    }
-    .logo{
-        justify-content: start;
-        width: 5000%;
-    }
-   
-    .logo img{
-        width: 150px !important;
-    }
-    .menu-btn{
-        display: block;
-    }
-        .title {
-            font-size: 17px !important;
-        }
-}
+
 @media screen and (max-width:900px) {
     .text-gradient{
         font-size: 28px;
@@ -367,12 +291,3 @@
                 }
 }
 
-@media screen and (min-width: 3050px) {
-    .overlay {
-        display: none !important;
-    }
-
-    .nav-links-container {
-        right: 0% !important;
-    }
-}
